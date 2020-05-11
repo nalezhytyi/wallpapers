@@ -1,0 +1,32 @@
+{
+  "expo": {
+    "name": "wallpapers",
+    "slug": "wallpapers",
+    "platforms": [
+      "ios",
+      "android",
+      "web"
+    ],
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSPhotoLibraryUsageDescription": "Give app experiences permission to access your photos",
+        "NSPhotoLibraryAddUsageDescription": "Give app experiences permission to save photos"
+      }
+    }
+  }
+}
