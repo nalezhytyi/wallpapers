@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import {
     StyleSheet,
     View,
@@ -12,10 +12,9 @@ import {
     Share
 } from 'react-native';
 import axios from 'axios';
-import {Ionicons} from '@expo/vector-icons';
+import { Ionicons } from '@expo/vector-icons';
 import * as Permissions from 'expo-permissions';
 import * as FileSystem from 'expo-file-system';
-
 import * as MediaLibrary from 'expo-media-library';
 
 
@@ -119,7 +118,7 @@ export default class App extends React.Component {
                                 borderRadius: this.borderRadius
                             }}
                             source={{uri: item.urls.regular}}
-                            resizeMode='cover'/>
+                            resizeMode='cover' />
                     </Animated.View>
                 </TouchableWithoutFeedback>
                 <Animated.View style={{
@@ -132,13 +131,13 @@ export default class App extends React.Component {
                 }}>
                     <View style={styles.containerMenu}>
                         <TouchableOpacity activeOpacity={0.5} onPress={() => this.shareWallpaper(item)}>
-                            <Ionicons name='ios-share' color='white' size={30}/>
+                            <Ionicons name='ios-share' color='white' size={30} />
                         </TouchableOpacity>
                         <TouchableOpacity activeOpacity={0.5} onPress={() => this.loadWallpapers()}>
-                            <Ionicons name='ios-refresh-circle' color='white' size={30}/>
+                            <Ionicons name='ios-refresh-circle' color='white' size={30} />
                         </TouchableOpacity>
                         <TouchableOpacity activeOpacity={0.5} onPress={() => this.saveToCameraRoll(item)}>
-                            <Ionicons name='ios-download' color='white' size={30}/>
+                            <Ionicons name='ios-download' color='white' size={30} />
                         </TouchableOpacity>
                     </View>
                 </Animated.View>
@@ -153,7 +152,7 @@ export default class App extends React.Component {
             <View style={styles.container}>
                 <ActivityIndicator
                     size='large'
-                    color='grey'/>
+                    color='grey' />
             </View>
         ) : (
             <View style={styles.container}>
@@ -163,7 +162,7 @@ export default class App extends React.Component {
                     pagingEnabled
                     data={this.state.images}
                     renderItem={this.renderItem}
-                    keyExtractor={item => item.id}/>
+                    keyExtractor={item => item.id} />
             </View>
         )
     }
