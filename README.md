@@ -1,4 +1,4 @@
-# Upadate wallpapers
+# Update wallpapers
 ![](update.gif)
 
 # Share photo
